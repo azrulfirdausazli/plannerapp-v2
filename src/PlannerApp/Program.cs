@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MudBlazor.Services;
 using Blazored.LocalStorage;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace PlannerApp
 {
@@ -22,13 +23,14 @@ namespace PlannerApp
             {
                 client.BaseAddress = new Uri("https://localhost:44344/");
             }).AddHttpMessageHandler<AuthorizationMessageHandler>();
-
+            builder.Services.AddTransient<AuthorizationMessageHandler>();
             //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped(sp => sp.GetService<IHttpClientFactory>().CreateClient("PlannerApp.Api"));
 
             builder.Services.AddMudServices();
             builder.Services.AddBlazoredLocalStorage();
-
+            builder.Services.AddAuthorizationCore();
+            builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthenticationStateProvider>();
 
             await builder.Build().RunAsync();
         }

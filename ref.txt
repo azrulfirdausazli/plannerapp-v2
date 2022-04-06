@@ -61,5 +61,17 @@ https://github.com/aksoftware98/plannerapp-v2
  inject  builder.Services.AddScoped(sp => sp.GetService<IHttpClientFactory>().CreateClient("PlannerApp.Api"));
 
   06)Blazor PlannerApp V2 |Create custom Authentication state Providers
+  *create JwtAuthenticationStateProvider
+  -how app will know user login or not or have role or not
+  *nuget System.IdentityModel.Tokens.Jwt
+  *nuget  <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.0" />
+  -inject 
+  builder.Services.AddAuthorizationCore();
+  builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthenticationStateProvider>();
+  *_import.razor
+  @using Microsoft.AspNetCore.Components.Authorization
+  @using Microsoft.AspNetCore.Authorization
+  *code App.Razor -> add CascadingAuthenticationState 
+  *code index.razor to test
 
   07)Blazor PlannerApp V2 |Implement Auth Layout & Design Login Form
