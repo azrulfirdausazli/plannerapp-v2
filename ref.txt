@@ -84,8 +84,23 @@ https://github.com/aksoftware98/plannerapp-v2
   *create Authentication/Login.razor
   *create Components/Authentication/LoginForm -> call bay login.razor
   *_Import.razor
-  *create LoginRequest, LoginResult.cs
+  *create LoginRequest
   *code LoginForm
   *test https://localhost:5001/authentication/login
 
    push to git -> create the auth layout & the login form
+
+   08)Blazor PlannerApp V2 |Implement the logic of login form
+   * create LoginResult.cs
+   * Code LoginForm
+   *Test login and check local Storage
+ 
+
+
+
+   09)Blazor PlannerApp V2 |Logout Functionality & user menu in App Bar
+   * push to git -> implement the logic of the login form
+
+
+
+   10)Blazor PlannerApp V2 create register model with validation using fluent validation
