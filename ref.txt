@@ -75,3 +75,17 @@ https://github.com/aksoftware98/plannerapp-v2
   *code index.razor to test
 
   07)Blazor PlannerApp V2 |Implement Auth Layout & Design Login Form
+  push to git -> implement the authentication infrastructure
+
+  *AuthLayout purpose for demo
+  -create Shared/AuthLayout
+  -use AuthLayout in index.razor
+
+  *create Authentication/Login.razor
+  *create Components/Authentication/LoginForm -> call bay login.razor
+  *_Import.razor
+  *create LoginRequest, LoginResult.cs
+  *code LoginForm
+  *test https://localhost:5001/authentication/login
+
+   push to git -> create the auth layout & the login form
