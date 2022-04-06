@@ -1,12 +1,27 @@
 https://www.youtube.com/watch?v=x5pL6KwtIlA&list=PLFJQnCcZXWjsYlljYtU0oKTnJDcrLGgM2&index=19
 https://github.com/aksoftware98/plannerapp-v2
 
+02)
+
+
+
 03)Blazor PlannerApp V2 |Crate the Github Repo
 -Setup with github
 -Create wasm Project
 -Nuget -> MudBlazor
        -> Blazored.LocalStorage
+-Inject builder.Services.AddMudServices()
+-inject builder.Services.AddBlazoredLocalStorage();
+*wwwroot/index.html 
+-remove   <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+-
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+ - <script src="_content/MudBlazor/MudBlazor.min.js"></script>
 
+ *code MainLayout.razor
+ *_import.razor -> @using MudBlazor
+ *dotnet watch run
 
  04)Blazor PlannerApp V2 |Discover the V2.0 API and Test it with
  *Migration da ada just Update-Database
@@ -32,4 +47,19 @@ https://github.com/aksoftware98/plannerapp-v2
   "isSuccess": true
 }
 
+*GitKraken -> click Stage all changes , Give names , Push ,Commit all change
+
 *create library PlannerApp.Shared and it`s folders
+*paste special json object as a class
+
+ 05)Blazor PlannerApp V2 |Setup HttpClient & Create Authorization Messaging Handler
+ *Message handler , set token in header of http
+ -nuget Microsoft.Extensions.Http
+ -inject builder.Services.AddHttpClient at program.cs
+ -create AuthorizationMessageHandler
+ -code AuthorizationMessageHandler to intercept token for supply from local storage to header
+ inject  builder.Services.AddScoped(sp => sp.GetService<IHttpClientFactory>().CreateClient("PlannerApp.Api"));
+
+  06)Blazor PlannerApp V2 |Create custom Authentication state Providers
+
+  07)Blazor PlannerApp V2 |Implement Auth Layout & Design Login Form
