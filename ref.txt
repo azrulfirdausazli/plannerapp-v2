@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=x5pL6KwtIlA&list=PLFJQnCcZXWjsYlljYtU0oKTnJDcrLGgM2&index=19
+https://github.com/aksoftware98/plannerapp-v2
+
+03)Blazor PlannerApp V2 |Crate the Github Repo
+-Setup with github
+-Create wasm Project
+-Nuget -> MudBlazor
+       -> Blazored.LocalStorage
+
+
+ 04)Blazor PlannerApp V2 |Discover the V2.0 API and Test it with
+ *Migration da ada just Update-Database
+ *create use
+ {
+  "email": "rose@yahoo.com",
+  "firstName": "rose",
+  "lastName": "nur",
+  "password": "Rose@123",
+  "confirmPassword": "Rose@123"
+}
+*login to get token
+{
+  "email": "rose@yahoo.com",
+  "password": "Rose@123"
+}
+{
+  "value": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJyb3NlQHlhaG9vLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZGFlZjU3OTctODU1My00NjMzLWE4YzEtMDAyMWNhNTRhZGY5IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoicm9zZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJudXIiLCJleHAiOjE2NTE3MTg5ODEsImlzcyI6Imh0dHA6Ly9haG1hZG1vemFmZmFyLm5ldCIsImF1ZCI6Imh0dHA6Ly9haG1hZG1vemFmZmFyLm5ldCJ9.8HfY6FgBDXvvyA01IheCkPoGyk-tEty_Mm6zmiuqP6s",
+    "expiryDate": "2022-05-05T02:49:41Z"
+  },
+  "message": "Access token retrieved successfully",
+  "isSuccess": true
+}
+
+*create library PlannerApp.Shared and it`s folders
