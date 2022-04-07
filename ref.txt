@@ -100,7 +100,10 @@ https://github.com/aksoftware98/plannerapp-v2
 
    09)Blazor PlannerApp V2 |Logout Functionality & user menu in App Bar
    * push to git -> implement the logic of the login form
-
-
+   *https://mudblazor.com/components/menu#icon-buttons
+   *create  LoginDisplay
+   *LoginDisplay use in MainLayout
 
    10)Blazor PlannerApp V2 create register model with validation using fluent validation
+   
+   * push to git -> implement the login display
