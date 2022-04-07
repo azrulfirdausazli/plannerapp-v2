@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using MudBlazor.Services;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
+using PlaneerApp.Client.Services;
 
 namespace PlannerApp
 {
@@ -31,6 +32,7 @@ namespace PlannerApp
             builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<AuthenticationStateProvider, JwtAuthenticationStateProvider>();
+            builder.Services.AddHttpClientServices();
 
             await builder.Build().RunAsync();
         }

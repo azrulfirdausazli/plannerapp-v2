@@ -116,12 +116,31 @@ https://github.com/aksoftware98/plannerapp-v2
    11)Create HttpClientServices Project to Abstract the api calls
    * push to git -> create and validate the model of registering
    *create project PlaneerApp.Client.Services
-
-
+   *create PlaneerApp.Client.Services/interfaces/IAuthenticationService
+   *Handle Failure , Error
+   -create PlaneerApp.Client.Services/Exceptions/ApiException.cs
+   *create HttpAuthenticationService
 
    12)Design & Implement the register form
+   *inject in program.cs  services.AddScoped<IAuthenticationService, HttpAuthenticationService>()
+   *BUT Better use Extensions , Cleaner Way
+   -nuget     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+   -create DependencyInjectionExtensions,AddHttpClientServices
+   -program.cs inject AddHttpClientServices
+   *create PlannerApp/Components/Authentication/RegisterForm
+   *create PlannerApp/Pages/Authentication/Register ->  call RegisterForm
+   *register.razor -> add FluentValidationValidator not DataAnnotationsValidator(login)
+   *don`t forget to import in _Import
+   *nuget <PackageReference Include="Blazored.FluentValidation" Version="2.0.1" />
+
+   *test
+   azrul@yahoo.com
+   @Zrul123
+
    13)Fix the layout of register form
+   *this step  miss by creator
+   *create PlannerApp/Pages/Authentication/Register ->  call RegisterForm
    14)Fetch Plan 1 | Create the model & http Client Service
-   15)Fetch Plan 1 | Create the plan cards list component
+   15)Fetch Plan 2 | Create the plan cards list component
    16)Search & Pagination the plan card list
    17)Show pan in DataGrid using MudBlazor table with server side reload
