@@ -139,8 +139,30 @@ https://github.com/aksoftware98/plannerapp-v2
 
    13)Fix the layout of register form
    *this step  miss by creator
-   *create PlannerApp/Pages/Authentication/Register ->  call RegisterForm
+   create PlannerApp/Pages/Authentication/Register ->  call RegisterForm
+
+   *git push -> implement the register form
+
    14)Fetch Plan 1 | Create the model & http Client Service
+   *create PagedList,PlanSummary
+   *create IPlansService,HttpPlansService
+   *create HttpPlansService
+
    15)Fetch Plan 2 | Create the plan cards list component
+   * DependencyInjectionExtensions -> inject .AddScoped<IPlansService, HttpPlansService>();
+   *create PlannerApp/Components/Plans/PlansList.razor
+                                       PlansList.cs
+    *create PlannerApp/Components/Plans/PlanCardsList
+    *create PlannerApp/Components/Plans/PlanCard
+    - https://mudblazor.com/components/skeleton#wave-example
+    - https://mudblazor.com/features/icons#icons
+    *create PlannerApp/Pages/Plans/Plans.razor -> call PlansList
+
    16)Search & Pagination the plan card list
+   *code PlanCardList.razor
+
+
    17)Show pan in DataGrid using MudBlazor table with server side reload
+   *https://mudblazor.com/components/table#tabpager-customization
+   (Server Side Filtering, Sorting and Pagination)
+   *create PlansTable.razor
